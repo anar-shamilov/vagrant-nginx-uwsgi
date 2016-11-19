@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  vars:
+    lbIP: 192.168.120.122
+    ngweb1: 192.168.120.11
+    ngweb2: 192.168.120.12
+  pre_tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+
+    - name: Install list of packages
+      apt: name={{item}} state=installed
+      with_items:
+           - haproxy
+
+  roles:
+    - haproxys
+

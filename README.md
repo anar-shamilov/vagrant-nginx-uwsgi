@@ -1,7 +1,7 @@
 ## Please change SSH path in Vagrantfile to yours with your own image or read the following instructions.
 
   - Download image with certificate which, are placed in in ssh-keys folder from [link](https://goo.gl/Oam3Ln).
-  - Put this certificates to your "~/.ssh" folder.
+  - Put this certificates from the "ssh-keys" folder into your "~/.ssh" folder.
   - Add new box file with "ub14x64" name to your box list. 
 ```sh
 $ vagrant box add ub14x64 ub14x64.box

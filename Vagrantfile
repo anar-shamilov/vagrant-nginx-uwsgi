@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
             web.ssh.private_key_path = "~/.ssh/id_rsa"
             web.ssh.insert_key = "~/.ssh/id_rsa"
             web.ssh.forward_agent = true
-            web.vm.synced_folder "~/test-vagrant/temps", "/home/vagrant/temps", owner: "vagrant", group: "vagrant"
+            web.vm.synced_folder "~/task/temps", "/home/vagrant/temps", owner: "vagrant", group: "vagrant"
             web.vm.network :private_network, ip: "192.168.120.1#{i}"
             web.vm.network :forwarded_port, guest: 22, host: "1002#{i}", id: "ssh"
             web.vm.provider :virtualbox do |v1|
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
         lb1.ssh.private_key_path = "~/.ssh/id_rsa"
         lb1.ssh.insert_key = "~/.ssh/id_rsa"
         lb1.ssh.forward_agent = true
-	lb1.vm.synced_folder "~/test-vagrant/temps", "/home/vagrant/temps", owner: "vagrant", group: "vagrant"
+	lb1.vm.synced_folder "~/task/temps", "/home/vagrant/temps", owner: "vagrant", group: "vagrant"
         lb1.vm.network :private_network, ip: "192.168.120.122"
         lb1.vm.network :forwarded_port, guest: 22, host: "10023", id: "ssh"
         lb1.vm.provider :virtualbox do |v2|

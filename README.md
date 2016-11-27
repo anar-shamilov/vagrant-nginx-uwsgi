@@ -15,7 +15,7 @@ $ git clone https://github.com/jamalshahverdiev/task.git
 $ cd  task
 $ cp ssh-keys/* ~/.ssh/
 ```
-  - Then start our machines.
+  - Then start machines.
 ```sh
 $ vagrant up
 ```

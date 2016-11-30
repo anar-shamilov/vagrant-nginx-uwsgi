@@ -21,5 +21,5 @@ $ vagrant up
   - At the end send request to the load balancer IP address.
 ```sh
 $ curl http://192.168.120.122
-<h1 style='color:blue'>Hello Datanyze!</h1>
+<h1 style='color:blue'>Hello ADA University!</h1>
 ```

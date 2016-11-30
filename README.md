@@ -8,12 +8,7 @@ $ vagrant box add ub14x64 ub14x64.box
   - Clone this repository to your user home folder:
 ```sh
 $ cd ~/
-$ git clone https://github.com/jamalshahverdiev/task.git
-```
-  - Put this certificates from the "ssh-keys" folder into your "~/.ssh" folder.
-```sh
-$ cd  task
-$ cp ssh-keys/* ~/.ssh/
+$ git clone https://github.com/jamalshahverdiev/vagrant-nginx-uwsgi.git ; cd vagrant-nginx-uwsgi
 ```
   - Then start machines.
 ```sh

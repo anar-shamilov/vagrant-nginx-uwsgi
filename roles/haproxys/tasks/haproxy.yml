@@ -8,7 +8,11 @@
     dest=/etc/haproxy/haproxy.cfg 
 
 - name: Enable Haproxy on StartUP
-  command: sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/haproxy
-
+  lineinfile: dest=/etc/default/haproxy
+              regexp='^ENABLED=0'
+              insertafter='#^ENABLED=0'
+              line='ENABLED=1'
+              state=present
+  
 - name: restart haproxy
   service: name=haproxy state=restarted

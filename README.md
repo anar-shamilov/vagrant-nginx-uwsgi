@@ -10,6 +10,10 @@ $ vagrant box add ub14x64 ub14x64.box
 $ cd ~/
 $ git clone https://github.com/jamalshahverdiev/vagrant-nginx-uwsgi.git ; cd vagrant-nginx-uwsgi
 ```
+  - Put this certificates from the "ssh-keys" folder into your "~/.ssh" folder.
+```sh
+$ cp ssh-keys/* ~/.ssh/
+```
   - Then start machines.
 ```sh
 $ vagrant up

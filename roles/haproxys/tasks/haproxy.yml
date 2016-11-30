@@ -10,7 +10,7 @@
 - name: Enable Haproxy on StartUP
   lineinfile: dest=/etc/default/haproxy
               regexp='^ENABLED'
-              insertbefore='#^ENABLED'
+              insertbefore='^#ENABLED'
               line='ENABLED=1'
   
 - name: restart haproxy
